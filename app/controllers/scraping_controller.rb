@@ -174,7 +174,6 @@ class ScrapingController < ApplicationController
     html_change_detecter.set_reloding_timer(10)
     html_change_detecter.enable_timer
     
-    puts "Push and Pull Test"
     render 'scraping/testing_page'
   end
   
