@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>POSTサンプル</title>
+</head>
+<body>
+
+<p>POSTサンプル</p>
+ 
+<%= form_tag('/scraping/receive_post', method: :post) do %>
+ <p>
+ URL：<input type="text" name="url" value="http://www.gizmodo.jp/"><br />
+ XPath：<input type="text" name="xpath" value='//div[@class="entry entry_l clfx"]' ><br />
+ CSS：<input type="text" name="css" value="h2/a"><br />
+ Keyword：<input type="text" name="keyword" value="イーロン・マスク"><br />
+ <input type="submit" value="送信" />
+ </p>
+<% end %>
+
+</body>
+</html>
