@@ -1,0 +1,39 @@
+
+<%= form_for(@new_criteria,:url => {:action => :criteria_addition}) do |nc| %>
+  <% if @new_criteria.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@new_criteria.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% @new_criteria.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= nc.label :Name %><br>
+    <%= nc.text_field :name%>
+  </div>
+  <div class="field">
+    <%= nc.label :Url %><br>
+    <%= nc.text_field :url %>
+  </div>
+  <div class="field">
+    <%= nc.label :XPath %><br>
+    <%= nc.text_field :xpath %>
+  </div>
+  <div class="field">
+    <%= nc.label :CSS%><br>
+    <%= nc.text_field :css %>
+  </div>
+  <div class="field">
+    <%= nc.label :Keyword %><br>
+    <%= nc.text_field:keyword %>
+  </div>
+
+  <div class="actions">
+    <%= nc.submit %>
+  </div>
+<% end %>

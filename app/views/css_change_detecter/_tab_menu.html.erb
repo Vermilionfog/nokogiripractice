@@ -1,0 +1,52 @@
+
+<%= stylesheet_link_tag "tab_menu", :media => "all" %>
+
+<div>
+    
+    //mainを使って検索条件を受け取り、その数だけタブを作る
+    <ul class="tab_select">
+        <% cr_count = 0 %>
+        <% criteria.each do |cr| %>
+            <% if cr_count == 0 then %>
+                <li class="current">
+            <% else %>
+                <li>
+            <% end %>
+            <%= cr.name %></li>
+            <% cr_count = cr_count+1 %>
+        <% end %>
+
+    </ul>
+     
+    <div class="tab_body">
+        <% cr_count = 0 %>
+        <% criteria.each do |cr| %>
+        
+        <% if cr_count == 0 then %>
+            <section class="tab_contents">
+        <% else %>
+            <section class="tab_contents tab_hidden">
+        <% end %>
+        <% cr_count = cr_count+1 %>
+        
+        <h1><%= cr.name %>を表示中</h1>
+        <div>
+            <%= render 'tab_menu',criteria:criteria ,type: :details %>
+        </div>
+        </section>
+        <% end %>
+        
+        
+    </div>
+</div>
+
+<script language="JavaScript">
+$(".tab_select li").click(function() {
+    var num = $(".tab_select li").index(this);
+    $(".tab_contents").addClass('tab_hidden');
+    $(".tab_contents").eq(num).removeClass('tab_hidden');
+    $(".tab_select li").removeClass('current');
+    $(this).addClass('current');
+});
+</script>
+

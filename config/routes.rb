@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   
+  get 'css_change_detecter/display'
+
+  get 'css_change_detecter/edit'
+
   get 'scraping/testing_page'
   post "scraping/receive_post"
-  
+  match ':controller(/:action(/:id))', via:[:get,:post,:patch]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

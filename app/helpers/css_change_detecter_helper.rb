@@ -1,0 +1,2 @@
+module CssChangeDetecterHelper
+end

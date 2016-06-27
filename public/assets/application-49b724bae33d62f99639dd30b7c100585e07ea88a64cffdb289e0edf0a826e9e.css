@@ -1,0 +1,78 @@
+
+/*タブのセレクト部分のCSS*/
+
+.tab_select {
+    background-color: #FAEFDD;
+    text-align: center;
+}
+ 
+.tab_select li {
+    border-right: solid 1px #F2F2F2;
+    width: 220px;
+    height: 42px;
+    line-height: 45px;
+    display: inline-block;
+    color: #DF951A;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+}
+ 
+.tab_select li:last-child {
+    border-right: none;
+}
+ 
+.tab_select li.current {
+    background-color: #ECBF76;
+    border-radius: 4px 4px 0 0;
+    height: 50px;
+    line-height: 55px;
+    margin-top: -5px;
+    color: #FFF;
+    cursor: auto;
+}
+ 
+.tab_select li.current:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: #DF951A;
+    display: block;
+    width: 100%;
+    height: 5px;
+}
+ 
+/*タブのコンテンツ部分のCSS*/
+.tab_body section h1 {
+    background-color: #ECBF76;
+    margin: 8px 0;
+    padding: 6px 0;
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+}
+ 
+.tab_body section div {
+    border: solid 1px #ECBF76;
+    padding: 10px;
+}
+ 
+.tab_body .tab_hidden {
+    display: none;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

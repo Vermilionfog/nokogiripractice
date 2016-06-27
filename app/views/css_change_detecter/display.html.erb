@@ -1,0 +1,45 @@
+<script language="JavaScript"><!--
+$(function() {
+    $('#accordion dd').hide();
+    $('#accordion dt a').click(function(){
+         $('#accordion dd').slideUp();
+         $(this).parent().next().slideDown();
+         return false;
+     });
+});
+//--></script>
+
+
+<dl id="accordion">
+    <dt><a href="">メニュー1</a></dt>
+    <dd>
+        <a href="#">サブメニュー1-1</a>
+        <a href="#">サブメニュー1-2</a>
+    </dd>
+    <dt><a href="">メニュー2</a></dt>
+    <dd>
+        <a href="#">サブメニュー2-1</a>
+        <a href="#">サブメニュー2-2</a>
+    </dd>
+    <dt><a href="">メニュー3</a></dt>
+    <dd>
+        <a href="#">サブメニュー3-1</a>
+        <a href="#">サブメニュー3-2</a>
+    </dd>
+</dl>
+
+<%= render :partial => "form" %>
+<table border ="1">
+    <tr>
+        <th>検索結果</th><th>検索条件</th><th>検索時刻</th>
+    </tr>
+    
+    <% @results.each do |result| %>
+        <tr>
+            <td><%= result.text %></td>
+            <td><%= result.search_time %></td>
+            <td><%= result.name%></td>
+        </tr>　　
+    <% end %>
+    
+</table>

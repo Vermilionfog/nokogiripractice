@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: "テスト用検索条件1"
+  url: 'http://www.gizmodo.jp/'
+  xpath: '//div[@class="entry entry_l clfx"]'
+  css: 'h2/a'
+  keyword: 'イーロン・マスク'
+
+two:
+  name: "テスト用検索条件2"
+  url: 'http://www.gizmodo.jp/'
+  xpath: '//div[@class="entry entry_l clfx"]'
+  css: 'h2/a'
+  keyword: 'イーロン・マスク'
